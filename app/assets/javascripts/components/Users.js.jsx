@@ -1,9 +1,10 @@
 class Users extends React.Component{
   constructor(props){
     super(props);
-    this.state={users: [], userForm: true, };
+    this.state={users: [], userForm: true, drinkList: false };
     this.submitUser= this.submitUser.bind(this);
     this.toggleUserForm= this.toggleUserForm.bind(this);
+    this.drinkList = this.drinkList.bind(this);
   }
 
   componentDidMount(){
@@ -22,6 +23,41 @@ class Users extends React.Component{
   alcoholCalculator(){
     alert('CHECK THIS OUT');
 
+  }
+
+  drinkList(){
+    this.setState({ drinkList: !this.state.drinkList})
+  }
+
+  showDrinkList(){
+    if (this.state.drinkList){
+    return(
+          <div>
+            <ul>Drinks
+              <li>Alabama Slammer - 2 Drinks
+              </li>
+              <li>Bloody Mary - 1 Drink
+              </li>
+              <li>Cosmopolitan  - 1 Drink
+              </li>
+              <li>Long Island - 2 Drinks
+              </li>
+              <li>Mai Tai - 1 Drink
+              </li>
+              <li>Margarita - 1 Drink
+              </li>
+              <li>Mojito  - 2 Drinks
+              </li>
+              <li>Sangria - 3 Drinks
+              </li>
+              <li>Sex on the Beach  - 1 Drink
+              </li>
+              <li>White Russian - 2 Drinks
+              </li>
+            </ul>
+          </div>
+              );
+    }
   }
 
   submitUser(e){
@@ -65,8 +101,10 @@ class Users extends React.Component{
             <button onClick={this.alcoholCalculator} className='btn'>
               Add DoubleDrink!
             </button>
-
-
+            <button onClick={this.drinkList} className= 'btn'>
+              Common Drinks
+            </button>
+              {this.showDrinkList()}
           </div>
         )
     }
