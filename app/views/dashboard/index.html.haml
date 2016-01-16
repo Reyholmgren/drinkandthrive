@@ -1,3 +1,22 @@
 / require react components
 = react_component "Users", {current_user: current_user}
 / = react_component "DrinkingSession"
+
+%html
+  %head
+    %title BAC Calculator
+    %script{:src => "main.js"}
+    %link{:href => "main.css", :rel => "stylesheet"}
+  %body{:onload => ""}
+    %h1 BAC Calculator
+    %h3 Clock
+    #txt
+    %h3 Time Since Last Drink
+    #last_drink_clock
+    %h3 Time Until Sober
+    #sober_clock
+    %div
+      %h3 BAC
+      %lable#output
+    %button{:onClick => "addDrink(1)"} Add a Single
+    %button{:onClick => "addDrink(2)"} Add a Double

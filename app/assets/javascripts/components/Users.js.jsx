@@ -1,7 +1,7 @@
 class Users extends React.Component{
   constructor(props){
     super(props);
-    this.state={users: [], userForm: true};
+    this.state={users: [], userForm: true, };
     this.submitUser= this.submitUser.bind(this);
     this.toggleUserForm= this.toggleUserForm.bind(this);
   }
@@ -16,9 +16,14 @@ class Users extends React.Component{
   }
 
   toggleUserForm(){
-
     this.setState({ userForm: !this.state.userForm });
   }
+
+  alcoholCalculator(){
+    alert('CHECK THIS OUT');
+
+  }
+
   submitUser(e){
     e.preventDefault();
     $.ajax({
@@ -41,16 +46,29 @@ class Users extends React.Component{
     {
     return( <div className='container'>
               <form  onSubmit= {this.submitUser}>
-                <input placeholder= "Your name" ref= "name" />
-                <input placeholder = "Gender" ref = "gender" />
-                <input placeholder = "Weight in pounds" ref = "weight" />
-                <button type = 'submit' className= "btn">
+                <input id='user_name' placeholder= "Your name" ref= "name" />
+                <input id='user_gender' placeholder = "Gender" ref = "gender" />
+                <input id='user_weight' placeholder = "Weight in pounds" ref = "weight" />
+                <button id='user_info_submit' type = 'submit' className= "btn">
                 Start Drinking!
                 </button>
                 <p> *By continuing on you agree that you are over 21 and that you will drink responsibly* </p>
               </form>
             
             </div>);      
+    }else{
+      return(
+          <div className='container'>
+            <button onClick={this.alcoholCalculator} className='btn'>
+              Add Drink!
+            </button>
+            <button onClick={this.alcoholCalculator} className='btn'>
+              Add DoubleDrink!
+            </button>
+
+
+          </div>
+        )
     }
   }
 
