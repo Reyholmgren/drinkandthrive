@@ -1,13 +1,10 @@
-<nav>
+<nav className = 'col s12 m8 l9'>
+
   <div class="nav-wrapper hoverable">
     <a class="brand-logo center ">Drink and Thrive</a>
-    
-    <ul id="nav-mobile" class="left ">
-      <li><a href="view/dashboard/index" >Home</a></li>
-    </ul>
 
     <ul id="nav-mobile" class="right ">
-      <li><a href="/FIXLATER">Log out</a></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete  %> </li>
     </ul>
   </div>
 </nav>
