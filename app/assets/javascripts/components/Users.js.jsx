@@ -80,17 +80,26 @@ class Users extends React.Component{
   addUserForm(){
     if (this.state.userForm)
     {
-    return( <div className='container'>
-              <form  onSubmit= {this.submitUser}>
-                <input id='user_name' placeholder= "Your name" ref= "name" />
-                <input id='user_gender' placeholder = "Gender" ref = "gender" />
-                <input id='user_weight' placeholder = "Weight in pounds" ref = "weight" />
-                <button id='user_info_submit' type = 'submit' className= "btn">
-                Start Drinking!
-                </button>
-                <p> *By continuing on you agree that you are over 21 and that you will drink responsibly* </p>
-              </form>
-            
+    return(<div className= "container-fluid grey darken-1">
+              <div className="container center">
+              <div className='row'>
+                <div>
+                  <form className= "center" onSubmit= {this.submitUser}>
+                  <br/>
+                    <input id='user_name' placeholder= "Your name" ref= "name" />
+                    <br/>
+                    <input id='user_gender' placeholder = "Gender" ref = "gender" />
+                    <br/>
+                    <input id='user_weight' placeholder = "Weight in pounds" ref = "weight" />
+                    <br/>
+                    <button id='user_info_submit' type = 'submit' className= "btn">
+                    Start Drinking!
+                    </button>
+                    <p className= "center"> *By continuing on you agree that you are over 21 and that you will drink responsibly* </p>
+                  </form>  
+                </div>
+                </div>
+              </div>
             </div>);      
     }else{
       return(
