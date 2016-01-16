@@ -1,2 +1,9 @@
 class DrinkingSessionsController < ApplicationController
+
+  
+
+
+
+
+
 end
