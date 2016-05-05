@@ -20,11 +20,6 @@ class Users extends React.Component{
     this.setState({ userForm: !this.state.userForm });
   }
 
-  alcoholCalculator(){
-    alert('CHECK THIS OUT');
-
-  }
-
   drinkList(){
     this.setState({ drinkList: !this.state.drinkList})
   }
@@ -55,8 +50,7 @@ class Users extends React.Component{
               <li>White Russian - 2 Drinks
               </li>
             </ul>
-          </div>
-              );
+          </div>);
     }
   }
 
@@ -114,17 +108,10 @@ class Users extends React.Component{
     }
   }
 
-
-
   render(){
         return(
           <div>
           {this.addUserForm()}
           </div>);
   }
-
-
-
-
-
 }
