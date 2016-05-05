@@ -3,11 +3,16 @@
     .col.s10.offset-s1.l6.offset-l3.grey.draken-2.center.z-depth-3
       %h1.grey.lighten-1 Drinking session has begun! 
       %button#add_drink.btn.center add a drink
-      %h3.container-fluid.grey.lighten-1 Current Blood Alcohol Content
+      .grey.lighten-1
+        %h3 BAC
+        %p Current Blood Alcohol Content
       %h3.lable#output 0.00
-      %h3.container-fluid.grey.lighten-1 Time Until Sober
+      .grey.lighten-1
+        %h3 Time Until Sober
+        %p Time remaining until your BAC reaches 0.08
       %h3#sober_clock 00:00
-      %h3.container-fluid.grey.lighten-1 Total Drinks
+      .grey.lighten-1 
+        %h3 Total Drinks
       %h3#total_drinks 0
 = react_component "Users", {current_user: current_user}
     
