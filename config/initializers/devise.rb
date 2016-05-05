@@ -1,6 +1,6 @@
 
 Devise.setup do |config|
-  config.omniauth :facebook, "929153613844665", "c9d7cd8deff2e28e0063ce799d1e437d", scope: 'email',
+  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"], scope: 'email',
     info_fields: 'email, name'
  
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'

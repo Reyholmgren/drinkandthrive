@@ -21,3 +21,11 @@ $secondary-color: color("teal", "lighten-1") !default;
 .container {
   padding: 50px;
 }
+
+#calculator {
+  display: none;
+}
+
+body{
+	background-color: grey;
+}

@@ -32,8 +32,8 @@ class Users extends React.Component{
   showDrinkList(){
     if (this.state.drinkList){
     return(
-          <div>
-            <ul>Drinks
+          <div className="col s1 offset-s5 grey draken-2 center z-depth-3">
+            <ul>
               <li>Alabama Slammer - 2 Drinks
               </li>
               <li>Bloody Mary - 1 Drink
@@ -80,22 +80,23 @@ class Users extends React.Component{
   addUserForm(){
     if (this.state.userForm)
     {
-    return(<div className= "container-fluid grey darken-1">
-              <div className="container center">
-              <div className='row'>
-                <div>
+    return(<div>
+              <div>
+              <div className='row '>
+                <div className="col s10 offset-s1 l6 offset-l3 grey draken-2 center z-depth-3">
                   <form className= "center" onSubmit= {this.submitUser}>
                   <br/>
-                    <input id='user_name' placeholder= "Your name" ref= "name" />
+                    <input id='user_name' placeholder= 'Your name (optional)' ref= "name" />
                     <br/>
-                    <input id='user_gender' placeholder = "Gender" ref = "gender" />
+                    <input id='user_gender' placeholder = 'Gender (male or female)' ref = "gender" />
                     <br/>
-                    <input id='user_weight' placeholder = "Weight in pounds" ref = "weight" />
+                    <input id='user_weight' placeholder = 'Weight (in pounds)' ref = "weight" />
                     <br/>
                     <button id='user_info_submit' type = 'submit' className= "btn">
                     Start Drinking!
                     </button>
                     <p className= "center"> *By continuing on you agree that you are over 21 and that you will drink responsibly* </p>
+                     <p className= "center"> *This is for entertainment purposes only* </p>
                   </form>  
                 </div>
                 </div>
@@ -103,15 +104,9 @@ class Users extends React.Component{
             </div>);      
     }else{
       return(
-          <div className='container'>
-            <button onClick={this.alcoholCalculator} className='btn'>
-              Add Drink!
-            </button>
-            <button onClick={this.alcoholCalculator} className='btn'>
-              Add DoubleDrink!
-            </button>
+          <div className='center-align container'>
             <button onClick={this.drinkList} className= 'btn'>
-              Common Drinks
+              Common Drink Info.
             </button>
               {this.showDrinkList()}
           </div>
