@@ -21,6 +21,7 @@ gem 'haml-rails'
 gem 'twilio-ruby'
 gem 'react-rails'
 gem 'puma'
+gem 'rails_12factor'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
